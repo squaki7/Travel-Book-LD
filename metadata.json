@@ -1,0 +1,5 @@
+{
+  "name": "Travel Book LD ",
+  "description": "A web application to parse text-based travel itineraries and display them in a visually appealing, interactive format. Users can paste structured text, and the app will generate a detailed travel book view.",
+  "requestFramePermissions": []
+}

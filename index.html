@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Travel Itinerary Generator</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    html, body {
+      height: 100%; width: 100%;
+      margin: 0; padding: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #f3f4f6;
+    }
+
+    /* Headers / Cards */
+    .section-header {
+      background-color: #7c1386;
+      color: #fff;
+      padding: 1rem 1.5rem;
+      border-radius: 0.75rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,.15);
+      transition: all .3s ease-in-out;
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+    .day-card, .hotel-card {
+      background: #fff;
+      border-radius: 1rem;
+      box-shadow: 0 15px 25px -5px rgba(0,0,0,.1), 0 5px 10px -5px rgba(0,0,0,.04);
+      padding: 2rem;
+      margin-bottom: 2rem;
+      transition: transform .3s ease-in-out, box-shadow .3s ease-in-out;
+      position: relative;
+      page-break-inside: avoid; break-inside: avoid;
+      overflow-wrap: break-word;
+    }
+    .day-card:hover, .hotel-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 30px -8px rgba(0,0,0,.2), 0 8px 15px -8px rgba(0,0,0,.08);
+    }
+    .hotel-image {
+      border-radius: .75rem; margin-bottom: 1rem;
+      width: 100%; height: auto; max-width: 400px;
+      box-shadow: 0 5px 15px rgba(0,0,0,.1);
+    }
+    .info-list li { margin-bottom: .75rem; line-height: 1.6; }
+    a { color: #F39C12; font-weight: 600; text-decoration: none; transition: color .2s, text-decoration .2s; }
+    a:hover { text-decoration: underline; }
+
+    .fade-in { opacity: 0; transform: translateY(20px); transition: opacity .6s ease-out, transform .6s ease-out; }
+    .fade-in.appear { opacity: 1; transform: translateY(0); }
+
+    .agency-info-banner {
+      background-color: #7c1386; color: #fff; padding: 1.5rem;
+      border-radius: 1rem; box-shadow: 0 4px 10px rgba(0,0,0,.15);
+      text-align: center; margin-bottom: 2rem;
+      page-break-inside: avoid; break-inside: avoid;
+    }
+    .toggle-icon { transition: transform .3s ease-in-out; }
+    .toggle-icon.rotated { transform: rotate(90deg); }
+    .day-title-color { color: #7c1386; }
+
+    section { page-break-inside: avoid; break-inside: avoid; }
+    .new-page-section { page-break-before: always; break-before: page; }
+
+    /* Custom Message Box */
+    .message-box {
+      animation: fadeInOut 5s forwards;
+    }
+    @keyframes fadeInOut {
+      0% { opacity: 0; transform: translateY(-20px); }
+      10% { opacity: 1; transform: translateY(0); }
+      90% { opacity: 1; transform: translateY(0); }
+      100% { opacity: 0; transform: translateY(-20px); display: none; }
+    }
+  </style>
+<script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.1.1/",
+    "react/": "https://aistudiocdn.com/react@^19.1.1/",
+    "react": "https://aistudiocdn.com/react@^19.1.1"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body class="bg-gray-100 p-4 sm:p-6 lg:p-8">
+  <div id="root"></div>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>

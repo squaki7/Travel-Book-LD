@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import type { ItineraryModel, Passenger, Day, Hotel, DayItem, HotelStay, RouteMap, PortalLink } from './types';
-import { buildItineraryModel, stringifyItinerary } from './services/itineraryParser';
+import { buildItineraryModel, stringifyItinerary } from './src/services/itineraryParser';
+
 
 type Language = 'en' | 'es';
 
